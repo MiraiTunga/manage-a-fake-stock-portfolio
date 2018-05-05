@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+  h1 Manage a fake stock portfolio
+  p Enter Stock Code for Share you wish to buy
+
+  form(id="GetStockData")
+    input(type="test", name="StockCode")
+    button.button.btn.btn-primary(type="submit") Get Price
+
+  hr
+
+  div(role="alert").alert.alert-danger
+    a(href="https://www.quandl.com/") This App uses Quandl
+    p #{renderError}
+
+
+

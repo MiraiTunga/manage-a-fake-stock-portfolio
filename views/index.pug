@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  h1 Manage a fake stock portfolio
+  p Enter Stock Code for Share you wish to buy
+
+  form(id="GetStockData")
+    input(type="test", name="StockCode")
+    button.button.btn.btn-primary(type="submit") Get Price
+
+  hr
+
+  div
+    h3 Stock Code #{renderStockCode}
+    h4 #{renderStockName}
+    p.shareInformation  #{renderStockDescription}
+    strong Buy Price
+    p #{renderStockPrice}
+    button(data-code=renderStockCode,data-price=renderStockPrice,data-ammount=1,data-name=renderStockName,data-description=renderStockDescription).buy.btn.btn-success Buy
+
+
